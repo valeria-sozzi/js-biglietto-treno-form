@@ -1,3 +1,9 @@
+// variabili dei dati che voglio salvare valori default
+let fasciaEtà = "Maggiorenne";
+let kmValue = 0;
+let totalPrice = 0;
+let nomeUtente = '';
+
 const elementName = document.getElementById('full_name')
 
 elementName.addEventListener('change',function(){
@@ -9,12 +15,6 @@ const elementInfoTicket = document.getElementById('info_ticket')
 
 // prezzo fisso al km
 const kmPrice = 0.21;
-
-// variabili dei dati che voglio salvare valori default
-let fasciaEtà = "Maggiorenne";
-let kmValue = 0;
-let totalPrice = 0;
-
 
 const calcoloPrezzo = () => {
    if (fasciaEtà === "Minorenne") {
@@ -71,5 +71,8 @@ elementAnnulla.addEventListener('click',function(){
     document.getElementById ('full_name').value = '';
     document.getElementById ('km').value = '';
     document.getElementById ('age').value = 'Maggiorenne';
-    document.getElementById('info_ticket').className = 'info_ticket'
+    document.getElementById('info_ticket').className = 'info_ticket';
+    totalPrice = '';
+    document.getElementById ('carriage').innerHTML =  '';
+    document.getElementById ('code_ticket').innerHTML = '';
 })
